@@ -1,0 +1,44 @@
+:root {
+    --azul-turquesa: '#026E81';
+    --azul-turquesa-claro: '#00ABBD';
+    --azul: '#0099DD';
+    --laranja: '#FF9933';
+    --azul-claro: '#A1C7E0';
+    --fonte-principal: 'Poppins', sans-serif;
+    --fonte-secundaria: 'Roboto', sans-serif;
+}
+
+body {
+    font-family: var(--fonte-secundaria);
+}
+
+* {
+    box-sizing: border-box;
+
+    margin: 0;
+    padding: 0;
+}
+
+.conteudo-home img {
+    width: 100vw;
+}
+
+.projetos-lista {
+    width: 100vw;
+}
+
+.projetos-lista li img {
+    width: 100%
+}
+
+.home-titulo {
+    font-size: 28px;
+    text-align: center;
+    padding: 1em;
+}
+
+@media screen and (min-width: 720px) {
+    .conteudo-home img {
+        width: 100%
+    }
+}
