@@ -1,15 +1,38 @@
 :root {
-    --azul-turquesa: '#026E81';
-    --azul-turquesa-claro: '#00ABBD';
-    --azul: '#0099DD';
-    --laranja: '#FF9933';
-    --azul-claro: '#A1C7E0';
+    --azul-turquesa: #026E81;
+    --azul-turquesa-claro: #00ABBD;
+    --azul: #0099DD;
+    --laranja: #FF9933;
+    --azul-claro: #A1C7E0;
+    --preto-titulo: #242424;
+    --fundo-da-aplicação: #f0f0f0;
     --fonte-principal: 'Poppins', sans-serif;
     --fonte-secundaria: 'Roboto', sans-serif;
 }
 
 body {
     font-family: var(--fonte-secundaria);
+    font-size: 20px;
+
+    color: var(--preto-titulo);
+    background-color: var(--fundo-da-aplicação)
+}
+
+section {
+    padding: 1em;
+}
+
+header {
+    padding: 1em;
+}
+
+h3 {
+    font-size: 26px;
+}
+
+h2 {
+    font-size: 32px;
+    padding-bottom: 1em;
 }
 
 * {
@@ -20,11 +43,15 @@ body {
 }
 
 .conteudo-home img {
-    width: 100vw;
+    width: 100%;
+}
+
+.conteudo-projetos p {
+    padding-bottom: 1em;
 }
 
 .projetos-lista {
-    width: 100vw;
+    width: 100%;
 }
 
 .projetos-lista li img {
@@ -32,7 +59,6 @@ body {
 }
 
 .home-titulo {
-    font-size: 28px;
     text-align: center;
     padding: 1em;
 }
@@ -41,8 +67,47 @@ body {
     display: none;
 }
 
+.projetos-lista {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    list-style-type: none;
+    gap: 1em;
+}
+
+.conteudo-projetos {
+    text-align: center;
+    background-color: var(--azul-claro);
+}
+
+.projetos-lista li {
+    grid-column: span 12;
+}
+
+.lista-habilidades {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1em
+}
+
+.lista-habilidades li {
+    background-color: var(--azul-claro);
+    padding: 1em;
+    border-radius: 1em;
+}
+
+.lista-habilidades li h3 {
+    padding-top: 1em;
+    padding-bottom: .5em;
+}
+
+.conteudo-habilidades h2 {
+    text-align: center;
+}
+
 
 @media screen and (min-width: 720px) {
+
     .conteudo-home img {
         width: 100%
     }
@@ -74,5 +139,31 @@ body {
         width: 500px;
         height: 700px;
         object-fit: cover;
+    }
+
+    .projetos-lista li:nth-child(1) {
+        grid-column: 2 / span 3;
+    }
+
+    .projetos-lista li:nth-child(2) {
+        grid-column: 5 / span 4;
+    }
+
+    .projetos-lista li:nth-child(3) {
+        grid-column: 9 / span 3;
+    }
+
+    .projetos-lista li img {
+        height: 300px;
+        object-fit: cover;
+    }
+
+    .lista-habilidades {
+        flex-direction: row;
+    }
+
+    .lista-habilidades li {
+        height: 300px;
+        flex: 1
     }
 }
