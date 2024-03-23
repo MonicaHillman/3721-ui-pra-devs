@@ -37,8 +37,42 @@ body {
     padding: 1em;
 }
 
+.cabecalho-lista {
+    display: none;
+}
+
+
 @media screen and (min-width: 720px) {
     .conteudo-home img {
         width: 100%
+    }
+
+    .cabecalho-lista {
+        display: flex;
+        gap: 1em;
+        list-style-type: none;
+
+    }
+
+    .cabecalho-lista li a {
+        text-decoration: none;
+    }
+
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .conteudo-home {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .conteudo-home img {
+        width: 500px;
+        height: 700px;
+        object-fit: cover;
     }
 }
