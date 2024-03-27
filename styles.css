@@ -19,11 +19,25 @@ body {
 }
 
 section {
-    padding: 1em;
+    padding: 1em 10%;
 }
 
 header {
-    padding: 1em;
+    padding: 1em 10%;
+    background-color: var(--preto-titulo);
+    color: var(--fundo-da-aplicação);
+}
+
+a {
+    color: var(--fundo-da-aplicação)
+}
+
+a:hover {
+    color: var(--azul)
+}
+
+a:active {
+    color: var(--laranja)
 }
 
 h3 {
@@ -33,6 +47,10 @@ h3 {
 h2 {
     font-size: 32px;
     padding-bottom: 1em;
+}
+
+p {
+    line-height: 1.5em;
 }
 
 * {
@@ -58,11 +76,6 @@ h2 {
     width: 100%
 }
 
-.home-titulo {
-    text-align: center;
-    padding: 1em;
-}
-
 .cabecalho-lista {
     display: none;
 }
@@ -77,6 +90,8 @@ h2 {
 .conteudo-projetos {
     text-align: center;
     background-color: var(--azul-claro);
+    height: 50vh;
+    padding-top: 2em
 }
 
 .projetos-lista li {
@@ -105,16 +120,19 @@ h2 {
     text-align: center;
 }
 
+.conteudo-habilidades {
+    height: 50vh;
+    padding-top: 2em
+}
 
 @media screen and (min-width: 720px) {
-
-    .conteudo-home img {
-        width: 100%
+    .home-titulo {
+        font-size: 46px;
     }
 
     .cabecalho-lista {
         display: flex;
-        gap: 1em;
+        gap: 3em;
         list-style-type: none;
 
     }
@@ -131,14 +149,21 @@ h2 {
 
     .conteudo-home {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: center;
+        gap: 3em;
+        height: 80vh;
     }
 
+
     .conteudo-home img {
-        width: 500px;
-        height: 700px;
+        width: 700px;
+        height: 500px;
         object-fit: cover;
+        border-radius: 16px;
+        -webkit-box-shadow: 10px 10px 15px 0px rgba(2, 110, 129, 0.6);
+        -moz-box-shadow: 10px 10px 15px 0px rgba(2, 110, 129, 0.6);
+        box-shadow: 10px 10px 15px 0px rgba(2, 110, 129, 0.6);
     }
 
     .projetos-lista li:nth-child(1) {
@@ -155,6 +180,7 @@ h2 {
 
     .projetos-lista li img {
         height: 300px;
+        border-radius: 16px;
         object-fit: cover;
     }
 
