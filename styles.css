@@ -60,8 +60,77 @@ p {
     padding: 0;
 }
 
+.conteudo-formulario {
+    background-color: var(--azul-claro);
+
+}
+
+.conteudo-formulario h2 {
+    text-align: center;
+}
+
+.formulario-container {
+    display: flex;
+    justify-content: center;
+    gap: 5em;
+}
+
+.lista-formulario {
+    list-style-type: none;
+}
+
+.lista-formulario li {
+    padding-top: 1em;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+    font-weight: 500;
+    padding-top: 1em;
+}
+
+
+.info-titulo {
+    font-weight: 500;
+}
+
+button {
+    background-color: var(--azul-turquesa);
+    color: var(--fundo-da-aplicação);
+    font-weight: 500;
+    border: none;
+    padding: 1em 2em;
+    font-family: var(--fonte-principal);
+    border-radius: 14px;
+    margin-top: 2em;
+    width: 50%;
+
+
+}
+
 .conteudo-home img {
     width: 100%;
+}
+
+input,
+textarea {
+    padding: 1em 1em;
+    border: none;
+    border-radius: 14px;
+}
+
+textarea {
+    height: 200px;
+}
+
+form {
+    width: 30%;
+}
+
+button {
+    display: block;
 }
 
 .conteudo-projetos p {
