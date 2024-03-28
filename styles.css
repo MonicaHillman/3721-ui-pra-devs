@@ -25,19 +25,12 @@ section {
 header {
     padding: 1em 10%;
     background-color: var(--preto-titulo);
-    color: var(--fundo-da-aplicação);
-}
-
-a {
     color: var(--fundo-da-aplicação)
 }
 
-a:hover {
-    color: var(--azul)
-}
-
-a:active {
-    color: var(--laranja)
+header a {
+    color: var(--fundo-da-aplicação);
+    line-height: 30px;
 }
 
 h3 {
@@ -47,6 +40,13 @@ h3 {
 h2 {
     font-size: 32px;
     padding-bottom: 1em;
+    line-height: 1.3em;
+    font-size: 40px;
+    line-height: 42px;
+}
+
+p {
+    line-height: 30px;
 }
 
 
@@ -59,15 +59,11 @@ h2 {
 
 .conteudo-home img {
     width: 100%;
-}
+    height: 100%;
+    border-radius: 100%;
+    background-color: var(--laranja);
+    box-shadow: 10px 10px 20px 0px var(--azul-turquesa);
 
-.home-titulo {
-    text-align: center;
-    padding: 1em;
-}
-
-.conteudo-projetos p {
-    padding-bottom: 1em;
 }
 
 .projetos-lista {
@@ -75,7 +71,9 @@ h2 {
 }
 
 .projetos-lista li img {
-    width: 100%
+    width: 100%;
+    border-radius: 24px;
+    object-fit: cover;
 }
 
 .cabecalho-lista {
@@ -86,13 +84,29 @@ h2 {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     list-style-type: none;
-    gap: 1em;
+    gap: 16px;
+    text-align: left;
+}
+
+.projetos-lista h3 {
+    margin-top: 32px;
+    margin-bottom: 8px;
+    font-size: 24px;
+    line-height: 30px;
+}
+
+.projetos-lista p {
+
+    line-height: 27px;
 }
 
 .conteudo-projetos {
     text-align: center;
+    display: flex;
+    flex-direction: column;
     background-color: var(--azul-claro);
-
+    padding-top: 120px;
+    padding-bottom: 120px;
 }
 
 .projetos-lista li {
@@ -108,26 +122,131 @@ h2 {
 
 .lista-habilidades li {
     background-color: var(--azul-claro);
-    padding: 1em;
+    padding: 32px;
     border-radius: 1em;
 }
 
 .lista-habilidades li h3 {
-    padding-top: 1em;
-    padding-bottom: .5em;
+    font-size: 24px;
+    line-height: 27px;
 }
+
+.lista-habilidades li div {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.conteudo-habilidades {
+    padding-top: 120px;
+    padding-bottom: 120px;
+    background-color: var(--azul-fundo);
+}
+
 
 .conteudo-habilidades h2 {
     text-align: center;
+    padding-top: 1em;
+    padding-bottom: 1em;
 }
 
+.lista-habilidades li img {
+    background-color: var(--azul-turquesa);
+    border-radius: 16px;
+    width: 72px;
+    padding: .5em;
+}
+
+.conteudo-formulario {
+    background-color: var(--azul-claro);
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+.conteudo-formulario h2 {
+    text-align: center;
+}
+
+
+
+.lista-formulario {
+    list-style-type: none;
+}
+
+.lista-formulario li {
+    padding-top: 1em;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+    font-weight: 500;
+    padding-top: 1em;
+}
+
+.projetos-lista li img {
+    height: 300px;
+}
+
+
+.info-titulo {
+    font-weight: 500;
+}
+
+button {
+    display: block;
+    background-color: var(--azul-turquesa);
+    color: var(--fundo-da-aplicação);
+    font-weight: 500;
+    border: none;
+    padding: 1em 2em;
+    font-family: var(--fonte-principal);
+    border-radius: 14px;
+    margin-top: 2em;
+    width: 50%;
+    font-size: 16px;
+}
+
+input,
+textarea {
+    padding: 1em 1em;
+    border: none;
+    border-radius: 14px;
+    font-family: var(--fonte-secundaria);
+    font-size: 16px;
+}
+
+textarea {
+    height: 200px;
+}
+
+button {
+    display: block;
+}
+
+
+
 @media screen and (min-width: 720px) {
-    .home-titulo {
-        font-size: 46px;
+    form {
+        width: 30%;
     }
 
     .conteudo-home img {
-        width: 100%;
+        width: 70%;
+        height: 70%;
+    }
+
+    .formulario-container {
+        display: flex;
+        justify-content: center;
+        gap: 5em;
+    }
+
+    .home-titulo {
+        font-size: 48px;
+        line-height: 56px;
     }
 
     .cabecalho-lista {
@@ -151,15 +270,10 @@ h2 {
         display: flex;
         justify-content: space-around;
         align-items: center;
-        gap: 1em;
+        gap: 10em;
+        height: 80vh;
     }
 
-
-    .conteudo-home img {
-        width: 500px;
-        height: 700px;
-        object-fit: cover;
-    }
 
     .projetos-lista li:nth-child(1) {
         grid-column: 2 / span 3;
@@ -173,13 +287,11 @@ h2 {
         grid-column: 9 / span 3;
     }
 
-    .projetos-lista li img {
-        height: 300px;
-        object-fit: cover;
-    }
+
 
     .lista-habilidades {
         flex-direction: row;
+
     }
 
     .lista-habilidades li {
