@@ -97,6 +97,7 @@ p {
 }
 
 button {
+    display: block;
     background-color: var(--azul-turquesa);
     color: var(--fundo-da-aplicação);
     font-weight: 500;
@@ -106,8 +107,6 @@ button {
     border-radius: 14px;
     margin-top: 2em;
     width: 50%;
-
-
 }
 
 .conteudo-home img {
